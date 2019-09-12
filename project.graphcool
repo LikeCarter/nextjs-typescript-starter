@@ -1,0 +1,22 @@
+# projectId: ck0gy4l842bfs0148od40r5wo
+# version: 4
+
+type File @model {
+  contentType: String!
+  createdAt: DateTime!
+  id: ID! @isUnique
+  name: String!
+  secret: String! @isUnique
+  size: Int!
+  updatedAt: DateTime!
+  url: String! @isUnique
+}
+
+type User @model {
+  createdAt: DateTime!
+  email: String @isUnique
+  id: ID! @isUnique
+  name: String!
+  password: String
+  updatedAt: DateTime!
+}
